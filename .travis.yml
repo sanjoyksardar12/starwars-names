@@ -9,7 +9,6 @@ branches:
 notifications:
   email: false
 node_js:
-  - node
   - 14
 before_install: 
   - npm i - g npm@latest

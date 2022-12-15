@@ -4,8 +4,8 @@
   "description": "get random starwars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w",
-    "test:single": "mocha src/index.test.js",
+    "test": "mocha src/index.test.js",
+    "test:watch": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release",
     "commit": "cz"
   },
@@ -32,10 +32,10 @@
     "commitizen": "4.2.6",
     "cz-conventional-changelog": "3.3.0",
     "mocha": "10.2.0",
-    "semantic-release": "^19.0.5"
+    "semantic-release": "19.0.5"
   },
   "config": {
-    "commitizen":{
+    "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
   }

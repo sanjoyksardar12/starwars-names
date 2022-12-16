@@ -1,5 +1,5 @@
-var uniqueRamdomArray = require("unique-random-array");
-var starwarsNames = require("./starwars-names.json");
+import uniqueRamdomArray from "unique-random-array";
+import starwarsNames from "./starwars-names.json";
 
 var getRandomItem = uniqueRamdomArray(starwarsNames);
 

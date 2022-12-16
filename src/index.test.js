@@ -1,9 +1,9 @@
-var expect = require("chai").expect;
-var starwars = require("./index.js")
+import { expect} from "chai"
+import starwars from "./index"
 
 describe("starwars-names", function(){
     describe("all", function () {
-        it("should be an array of string", function(){
+        it("should be an array of string", ()=>{
             expect(starwars.all).to.be.satisfy(isArrayOfString);
             function isArrayOfString(array){
                 return array.every(item=>typeof item === "string")

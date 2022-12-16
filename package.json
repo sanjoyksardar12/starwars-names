@@ -2,13 +2,15 @@
   "name": "starwars-names-test-sanjoyksardar12",
   "version": "0.0.0-development",
   "description": "get random starwars names",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest src/index.test.js",
     "report-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/codecov",
     "test:watch": "jest src/index.test.js --watch  --collect-coverage",
     "semantic-release": "semantic-release",
-    "commit": "cz"
+    "commit": "cz",
+    "build": "babel --copy-files  --out-dir dist --ignore src/**/*.test.js src",
+    "prebuild": "rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,14 @@
   "dependencies": {
     "unique-random-array": "1.0.0"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "devDependencies": {
+    "@babel/cli": "7.19.3",
+    "@babel/core": "7.20.5",
+    "@babel/preset-env": "7.20.2",
     "chai": "4.3.7",
     "codecov": "3.8.3",
     "commitizen": "4.2.6",
@@ -37,6 +46,7 @@
     "jest": "29.3.1",
     "mocha": "10.2.0",
     "nyc": "15.1.0",
+    "rimraf": "3.0.2",
     "semantic-release": "19.0.5"
   },
   "config": {

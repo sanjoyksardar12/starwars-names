@@ -16,6 +16,8 @@ before_install:
   - npm i - g npm@latest
 before_script: 
   - npm prune
+script:
+  - npm run build
 after_script: 
   - npm run report-coverage
   - npm run semantic-release

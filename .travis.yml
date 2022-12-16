@@ -1,5 +1,7 @@
 sudo: false
 language: node_js
+codecov: 
+  token: 404b31fe-8709-43e7-a17c-1babd4605f24
 cache: 
   directories:
     - node_modules
